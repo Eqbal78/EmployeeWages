@@ -6,18 +6,20 @@ namespace EmployeeWages
     {
         static void Main(string[] args)
         {
-            int Is_Full_Time = 1;
-            Random random = new Random();
-            int empcheck = random.Next(0, 3);
-            Console.WriteLine("Welcome to Employee Wage Computation Program using C#");
-            if (empcheck == Is_Full_Time)
+            int Full_Time = 1;
+            int Emp_rate_per_Hrs = 20;
+            int empHrs, empWage;
+            Random r = new Random();
+            int check = r.Next(1, 3);
+            if (check == Full_Time)
             {
-                Console.WriteLine("Employee is Present");
+                empHrs = 8;
             }
             else
-            {
-                Console.WriteLine("Emplyoee is Absent");
-            }
+                empHrs = 0;
+
+            empWage = empHrs * Emp_rate_per_Hrs;
+            Console.WriteLine("Employee Wages: " + empWage);
         }
     }
 }
